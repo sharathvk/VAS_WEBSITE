@@ -1,8 +1,10 @@
 import dash
-from dash import html, dcc, Input, Output
+from dash import html, dcc, Output, Input
 import dash_bootstrap_components as dbc
 
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+server = app.server
+
 
 # ------------------ PAGES ------------------
 
@@ -69,6 +71,8 @@ def display_page(pathname):
         return index_page
 
 # ------------------ RUN ------------------
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)
