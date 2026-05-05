@@ -21,4 +21,4 @@ COPY . .
 EXPOSE 8050
 
 # Run app using gunicorn
-CMD ["gunicorn", "app:server", "-b", "0.0.0.0:8050"]
+CMD ["gunicorn", "main:server", "-b", "0.0.0.0:8050"]
